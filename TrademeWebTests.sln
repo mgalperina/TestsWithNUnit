@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrademeTests", "TrademeTests\TrademeTests.csproj", "{8A077A5A-CCC3-48D4-BAC9-C7D1CA151B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverUtilities", "WebDriverUtilities\WebDriverUtilities.csproj", "{184F735D-0710-4C18-A964-E55DF4E9775B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A077A5A-CCC3-48D4-BAC9-C7D1CA151B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A077A5A-CCC3-48D4-BAC9-C7D1CA151B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A077A5A-CCC3-48D4-BAC9-C7D1CA151B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A077A5A-CCC3-48D4-BAC9-C7D1CA151B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184F735D-0710-4C18-A964-E55DF4E9775B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184F735D-0710-4C18-A964-E55DF4E9775B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184F735D-0710-4C18-A964-E55DF4E9775B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184F735D-0710-4C18-A964-E55DF4E9775B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
