@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
 using NUnit.Framework;
-using TrademeTests.PageObjects;
-using TrademeTests.WebDriver;
 using WebDriverUtilities.PageObjects;
-using OpenQA.Selenium.Support.UI;
+using WebDriverUtilities.WebDriver;
+
 
 namespace TrademeTests
 {
@@ -13,17 +12,20 @@ namespace TrademeTests
         private IWebDriver _driver;
         private TrademeHomePage _homePage;
         private PropertyHomePage _propertyHomePage;
-        private SearchResultsPage _searchResultsPage;
+        private SearchResultsPropertyPage _searchResultsPage;
 
-
+/// <summary>
+/// how to put browser's info into app.config??instead of storing it here
+/// </summary>
         [SetUp]
         public void SetUp()
         {
+           
             var driverFactory = new DriverFactory();
             _driver = driverFactory.GetBrowser("chrome", "50");
             _homePage = new TrademeHomePage(_driver);
             _propertyHomePage = new PropertyHomePage(_driver);
-            _searchResultsPage = new SearchResultsPage(_driver);
+            _searchResultsPage = new SearchResultsPropertyPage(_driver);
         }
 
 
@@ -79,6 +81,22 @@ namespace TrademeTests
             _propertyHomePage.ClickSearchResidential();
 
             Assert.AreEqual("3 - 5 bedrooms", _searchResultsPage.GetResultsTextAttOnResultsPage());
+        }
+
+        [Test]
+        public void SearchHouseInAucklandCityWithTwoBedroomsToFiveAndPrice350To850()
+        {
+            _homePage.ClickProperty();
+            _propertyHomePage.SelectForSaleRegion("Auckland");
+            _propertyHomePage.SelectForSaleDistrict("Auckland City");
+            _propertyHomePage.SelectBedroomsMinimum("3");
+            _propertyHomePage.SelectBedroomsMaximum("5");
+            _propertyHomePage.SelectPriceMinimum(6);
+            _propertyHomePage.SelectPriceMaximum(16);
+            _propertyHomePage.SelectPropertyType("House");
+            _propertyHomePage.ClickSearchResidential();
+
+            Assert.AreEqual("House, 3 - 5 bedrooms, $350,000 - $850,000", _searchResultsPage.GetResultsTextAttOnResultsPage());
         }
 
         [TearDown]

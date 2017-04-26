@@ -3,7 +3,7 @@ using OpenQA.Selenium.Remote;
 using System;
 
 
-namespace TrademeTests.WebDriver
+namespace WebDriverUtilities.WebDriver
 {
     /// <summary>
     /// Class that represents factory that creates IWebDriver

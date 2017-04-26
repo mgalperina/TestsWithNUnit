@@ -8,37 +8,25 @@ using System.Threading.Tasks;
 
 namespace WebDriverUtilities.PageObjects
 {
-    public class SearchResultsPage
-    {
-
-        public SearchResultsPage(IWebDriver _driver)
+    public class SearchResultsJobs
+    {  public SearchResultsJobs(IWebDriver _driver)
         {
             PageFactory.InitElements(_driver, this);
-
         }
 
         [FindsBy(How = How.ClassName, Using = "search-summary")]
         public IWebElement searchResultsText;
 
-
-        [FindsBy(How = How.ClassName, Using = "find-agent-link-div")]
-        public IWebElement findAgentsInText;
-
-        [FindsBy(How = How.ClassName, Using = "advanced-property-att")]
-        public IWebElement attText;
+        [FindsBy(How = How.XPath, Using = ".//*[@class='attSearchResultList']")]
+        public IWebElement attributeSearchResult;
 
         public string GetSearchResultsText()
         {
             return searchResultsText.Text;
         }
-        public string GetResultsTextOnResultsPage()
+        public string GetResultsTextAttributeOnResultsPage()
         {
-            return findAgentsInText.Text;
-        }
-
-        public string GetResultsTextAttOnResultsPage()
-        {
-            return attText.Text;
+            return attributeSearchResult.Text;
         }
 
     }

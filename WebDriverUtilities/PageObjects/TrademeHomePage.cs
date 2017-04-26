@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 
-namespace TrademeTests.PageObjects
+namespace WebDriverUtilities.PageObjects
 {
     public class TrademeHomePage
     {
@@ -18,11 +18,21 @@ namespace TrademeTests.PageObjects
         [FindsBy(How = How.XPath, Using = "(.//*[contains(text(),'Property')])[2]")]
         public IWebElement propertyButton;
 
+        [FindsBy(How = How.XPath, Using = "(.//*[contains(text(),'Jobs')])[3]")]
+        public IWebElement jobsButton;
+
 
         public void ClickProperty()
         {
             wait.Until(_driver => propertyButton.Displayed);
             propertyButton.Click();
+        }
+
+
+        public void ClickJobs()
+        {
+            wait.Until(_driver => jobsButton.Displayed);
+            jobsButton.Click();
         }
 
     }

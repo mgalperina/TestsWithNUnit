@@ -49,10 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\JobsHomePage.cs" />
     <Compile Include="PageObjects\PropertyHomePage.cs" />
-    <Compile Include="PageObjects\SearchResultsPage.cs" />
+    <Compile Include="PageObjects\SearchResultsJobs.cs" />
+    <Compile Include="PageObjects\SearchResultsPropertyPage.cs" />
     <Compile Include="PageObjects\TrademeHomePage.cs" />
-    <Compile Include="PageObjects\WebDriver\DriverFactory.cs" />
+    <Compile Include="WebDriver\DriverFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
