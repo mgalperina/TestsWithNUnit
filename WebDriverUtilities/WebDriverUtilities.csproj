@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\BasePageObject.cs" />
     <Compile Include="PageObjects\JobsHomePage.cs" />
     <Compile Include="PageObjects\PropertyHomePage.cs" />
     <Compile Include="PageObjects\SearchResultsJobs.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="WebDriver\DriverFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebDriver\Settings.cs" />
+    <Compile Include="WebDriver\WaitHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,23 +1,15 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
-using System;
+
 
 namespace WebDriverUtilities.PageObjects
 {
-    public class JobsHomePage
+    public class JobsHomePage : BasePageObject
     {
-        private IWebDriver _driver;
-        private WebDriverWait wait;
-        /// <summary>
-        /// PageFactory.InitElements   we use for???
-        /// </summary>
-        /// <param name="driver"></param>
-        public JobsHomePage(IWebDriver driver)
+        public JobsHomePage(IWebDriver driver) : base(driver)
         {
             _driver = driver;
-            PageFactory.InitElements(_driver, this);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
         }
 
         [FindsBy(How = How.XPath, Using = ".//*[contains(text(),'Search Jobs')]")]
@@ -44,6 +36,7 @@ namespace WebDriverUtilities.PageObjects
         [FindsBy(How = How.XPath, Using = "(.//*[@class='drop-container'])[10]")]
         public IWebElement hourlyMaxPayDDL;
 
+      
         public void ClickSearchJobs()
         {
             searchJobsButton.Click();

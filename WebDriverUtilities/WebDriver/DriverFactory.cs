@@ -13,7 +13,9 @@ namespace WebDriverUtilities.WebDriver
         {
             var settings = new Settings();
             var capabilities = Capabilities.GetCapabilities(settings);
-            var _driver = new RemoteWebDriver(new Uri(settings.RemoteDriver), capabilities);                
+            var _driver = new RemoteWebDriver(new Uri(settings.RemoteDriver), capabilities);
+            _driver.Navigate().GoToUrl(settings.Url);
+            _driver.Manage().Window.Maximize();
             return _driver;
         }       
     }

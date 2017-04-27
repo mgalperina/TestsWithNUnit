@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 
 namespace WebDriverUtilities.WebDriver
 {
@@ -30,9 +31,9 @@ namespace WebDriverUtilities.WebDriver
             get { return ConfigurationManager.AppSettings["resolution"]; ; }
         }
 
-        public string WaitBrowserToLaunch
+        public TimeSpan WaitBrowserToLaunch
         {
-            get { return ConfigurationManager.AppSettings["timeoutInSeconds"]; ; }
+            get { return TimeSpan.FromSeconds(Convert.ToDouble(ConfigurationManager.AppSettings["timeoutInSeconds"])); }
         }
     }
 }

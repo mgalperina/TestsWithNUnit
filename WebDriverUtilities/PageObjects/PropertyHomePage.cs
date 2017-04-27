@@ -3,6 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using WebDriverUtilities.WebDriver;
 
 namespace WebDriverUtilities.PageObjects
 {
@@ -15,7 +16,7 @@ namespace WebDriverUtilities.PageObjects
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait = WaitHelper.ReadWaitFromSettings(_driver);
 
         }
 
