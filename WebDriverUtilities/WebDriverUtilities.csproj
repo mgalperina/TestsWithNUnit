@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -54,8 +55,10 @@
     <Compile Include="PageObjects\SearchResultsJobs.cs" />
     <Compile Include="PageObjects\SearchResultsPropertyPage.cs" />
     <Compile Include="PageObjects\TrademeHomePage.cs" />
+    <Compile Include="WebDriver\Capabilities.cs" />
     <Compile Include="WebDriver\DriverFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebDriver\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

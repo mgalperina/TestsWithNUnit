@@ -17,7 +17,7 @@ namespace TrademeTests.JobsTests
         public void SetUp()
         {
             var driverFactory = new DriverFactory();
-            _driver = driverFactory.GetBrowser("chrome", "50");
+            _driver = driverFactory.GetBrowser();
             _homePage = new TrademeHomePage(_driver);
             _jobsHomePage = new JobsHomePage(_driver);
             _searchResultsJob = new SearchResultsJobs(_driver);
@@ -75,7 +75,6 @@ namespace TrademeTests.JobsTests
         {
             _driver.Close();
         }
-
 
     }
 }

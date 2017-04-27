@@ -22,7 +22,7 @@ namespace TrademeTests
         {
            
             var driverFactory = new DriverFactory();
-            _driver = driverFactory.GetBrowser("chrome", "50");
+            _driver = driverFactory.GetBrowser();
             _homePage = new TrademeHomePage(_driver);
             _propertyHomePage = new PropertyHomePage(_driver);
             _searchResultsPage = new SearchResultsPropertyPage(_driver);
